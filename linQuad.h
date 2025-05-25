@@ -382,8 +382,6 @@ inline void steeringMGLQ(double t, double t_s, double x01, double x02, double x0
                     rstate->values[8] = et13+et14;
                     rstate->values[9] = et15+et16;
                }
-               //cerr << rstate->values[0] << " " << rstate->values[1] << " " << rstate->values[2] << endl;
-               //<< " " << et5+et6 << " " << et7+et8 << " " <<  (x16+t12*t110*(t*(2.5e+2/1.69e+2)-t_s*(2.5e+2/1.69e+2))*(1.69e+2/1.25e+2)+t13*t59*t109*3.0) << " " << et9+et10 << " " << et11+et12 << " " << et13+et14 << "  " << et15+et16;
 } 
        
         
