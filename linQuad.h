@@ -28,7 +28,7 @@ namespace ob = ompl::base;
  *   for a 10D linearized quadrotor model.
  * 
  *   This implementation is based on the original MATLAB
- *   code developed by Dongliang Chang, available at:
+ *   code developed by Dr. Dongliang Chang, available at:
  *   https://github.com/dongliangCH/Accelerating-Kinodynamic-RRTstar-Through-Dimensionality-Reduction
  * 
  *   The C++ translation and any modifications or extensions 
