@@ -30,7 +30,7 @@ namespace ob = ompl::base;
  * 
  *   It is based on the original MATLAB code developed by 
  *   Dr. Dongliang Chang, available at:
- *   [https://github.com/dongliangCH/Accelerating-Kinodynamic-RRTstar-Through-Dimensionality-Reduction](https://github.com/dongliangCH/Accelerating-Kinodynamic-RRTstar-Through-Dimensionality-Reduction)
+ *   https://github.com/dongliangCH/Accelerating-Kinodynamic-RRTstar-Through-Dimensionality-Reduction
  * 
  *   The C++ translation and any modifications or extensions 
  *   were developed independently by the authors listed above.
