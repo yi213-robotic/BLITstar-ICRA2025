@@ -18,7 +18,29 @@
 #include "ompl/util/Console.h"
 using namespace std;
 namespace ob = ompl::base;
-    
+
+/********************************************************
+ * Author: Yi Wang, Eyal Weiss, Bingxian Mu, Oren Salzman
+ * 
+ * Description:
+ *   This file contains a C++ implementation of the 
+ *   steer function, including the cost and time functions, 
+ *   for a 10D linearized quadrotor model.
+ * 
+ *   This implementation is based on the original MATLAB
+ *   code developed by Dongliang Chang, available at:
+ *   https://github.com/dongliangCH/Accelerating-Kinodynamic-RRTstar-Through-Dimensionality-Reduction
+ * 
+ *   The C++ translation and any modifications or extensions 
+ *   were developed independently by the authors listed above.
+ * 
+ * License:
+ *   This code is provided for academic and research purposes only.
+ *   Please cite appropriately if you use or modify this implementation.
+ * 
+ ********************************************************/
+
+
 inline Eigen::VectorXd ArrivetimeMGLQ(double x01, double x02, double x03, double x04, double x05, double x06, double x07, double x08, double x09, double x010, double x11, double x12, double x13, double  x14, double x15,  double x16, double x17, double x18, double  x19, double x110)
 {   
 
