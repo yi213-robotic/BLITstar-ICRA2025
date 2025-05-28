@@ -32,7 +32,7 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  *********************************************************************/
 
-// Authors: Yi Wang
+// Authors: Yi Wang,Eyal Weiss, Bingxian Mu, Oren Salzman
 
 #ifndef OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_BLITSTAR_QUEUETYPES_
 #define OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_BLITSTAR_QUEUETYPES_
@@ -71,4 +71,4 @@ namespace ompl
     }      // namespace geometric
 }  // namespace ompl
 
-#endif  // OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_bmitstar_QUEUETYPES_
+#endif  // OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_blitstar_QUEUETYPES_
