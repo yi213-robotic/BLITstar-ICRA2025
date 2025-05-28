@@ -1,7 +1,7 @@
 /*********************************************************************
  * Software License Agreement (BSD License)
  *
- *  Copyright (c) 2019, University of Oxford
+ *  Copyright (c) 2025, University of New Hampshire
  *  All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without
@@ -32,7 +32,7 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  *********************************************************************/
 
-// Authors: Yi Wang
+// Authors: Yi Wang,Eyal Weiss, Bingxian Mu, Oren Salzman
 
 #include "ompl/geometric/planners/lazyinformedtrees/blitstar/Edge.h"
 
@@ -82,7 +82,7 @@ namespace ompl
                return isOnForwardTree_;
             }
 
-        }  // namespace aitstar
+        }  // namespace blitstar
 
     }  // namespace geometric
 
