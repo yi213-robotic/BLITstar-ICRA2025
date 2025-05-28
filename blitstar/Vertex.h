@@ -345,4 +345,4 @@ namespace ompl
 
 }  // namespace ompl
 
-#endif  // OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_bmitstar_VERTEX_
+#endif  // OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_blitstar_VERTEX_
