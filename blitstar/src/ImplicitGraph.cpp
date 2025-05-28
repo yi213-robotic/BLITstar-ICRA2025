@@ -1,7 +1,7 @@
 /*********************************************************************
  * Software License Agreement (BSD License)
  *
- *  Copyright (c) 2022, University of New Hamphsire
+ *  Copyright (c) 2025, University of New Hamphsire
  *  All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without
@@ -32,7 +32,7 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  *********************************************************************/
 
-// Authors: Yi Wang
+// Authors: Yi Wang,Eyal Weiss, Bingxian Mu, Oren Salzman
 #include <ompl/base/SpaceInformation.h>
 #include <ompl/base/objectives/PathLengthOptimizationObjective.h>
 #include <ompl/base/objectives/StateCostIntegralObjective.h>
@@ -357,34 +357,8 @@ namespace ompl
                         
                           //costToStart_ = lqEdgeCostMLQ_( startVertices_[0u]->getState(), newSamples_.back()->getState());
                           //costToGoal_ =  lqEdgeCostMLQ_(newSamples_.back()->getState(),goalVertices_[0u]->getState()) ;
-                    } while (!(spaceInformation_->getStateValidityChecker()->isValid(newSamples_.back()->getState()) ) );//&& fallWithinInformedRegion(costToStart_, costToGoal_)
-                      //ompl::base::Cost cc(1.529);
-                      //if(objective_->isCostBetterThan(solutionCost_,cc))
-                     // {
-                            //
-                           // 
-                      //}
-                     
-                    
-                      //cerr << newSamples_.back()->getId() << "  ";
-                      //spaceInformation_->printState(newSamples_.back()->getState());
-                      /*if(newSamples_.back()->getId() == 204)
-                         exit(-1);*/
-                      //cerr << "," << endl;
-                      /*cerr << "\\filldraw[red!50!blue] ";
-                          spaceInformation_->printState(newSamples_.back()->getState());
-                          cerr << "circle(1.2pt);"<< endl;
-                          cerr << "\\node[anchor=west] at"; 
-                          spaceInformation_->printState(newSamples_.back()->getState()); 
-                          cerr << "{\\scalebox{0.5}{$"<<newSamples_.back()->getId() << "$}}; " <<endl;*/
+                    } while (!(spaceInformation_->getStateValidityChecker()->isValid(newSamples_.back()->getState()) ) );
 
-                      /* //spaceInformation_->printState(newSamples_.back()->getState());*/
-                    // If this state happens to satisfy the goal condition, add it as such.
-                    /*if (problemDefinition_->getGoal()->isSatisfied(newSamples_.back()->getState()))
-                    {
-                        goalVertices_.emplace_back(newSamples_.back());
-                        newSamples_.back()->setCostToComeFromGoal(objective_->identityCost());
-                    }*/
                     auto costToCome = objective_->motionCostHeuristic(startVertices_[0u]->getState(), newSamples_.back()->getState());//lqEdgeCost_( startVertices_[0u]->getState(), newSamples_.back()->getState()) 
                     auto costToGo = objective_->motionCostHeuristic(newSamples_.back()->getState(), goalVertices_[0u]->getState());//lqEdgeCost_(newSamples_.back()->getState(),goalVertices_[0u]->getState()) 
                     newSamples_.back()->setLowerCostBoundToStart(costToCome);
@@ -622,7 +596,7 @@ namespace ompl
             bool ImplicitGraph::fallWithinInformedRegion(ompl::base::Cost costToStart, ompl::base::Cost costToGoal) 
             { return objective_->isCostBetterThan(objective_->combineCosts(costToStart,costToGoal),solutionCost_);} 
 
-        }  // namespace aitstar
+        }  // namespace blitstar
 
     }  // namespace geometric
 
