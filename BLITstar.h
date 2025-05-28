@@ -1,7 +1,7 @@
 /*********************************************************************
  * Software License Agreement (BSD License)
  *
- *  Copyright (c) 2022, University of New Hampshire
+ *  Copyright (c) 2025, University of New Hampshire
  *  All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without
@@ -44,13 +44,11 @@
 #include "ompl/base/Planner.h"
 #include <unsupported/Eigen/Polynomials>
 #include "ompl/geometric/PathGeometric.h"
-#include "dubins3D.h"
 #include "ompl/geometric/planners/lazyinformedtrees/blitstar/Edge.h"
 #include "ompl/geometric/planners/lazyinformedtrees/blitstar/ImplicitGraph.h"
 #include "ompl/geometric/planners/lazyinformedtrees/blitstar/Vertex.h"
 #include "ompl/geometric/planners/lazyinformedtrees/blitstar/Queuetypes.h"
 
-#include "DI.h"
 #include <chrono>
 using namespace std::chrono;
 namespace ompl
@@ -58,7 +56,7 @@ namespace ompl
     namespace geometric
     {
         /**
-        @anchor gbmitstar
+        @anchor gblitstar
 
         \ref blitstar "BLIT*" (Bidirectional Lazy Informed Trees) is an almost-surely asymptotically optimal motion planner.
    
