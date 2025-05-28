@@ -33,6 +33,7 @@
  *********************************************************************/
 
 // Authors: Yi Wang,Eyal Weiss, Bingxian Mu, Oren Salzman
+/*We adapt from AIT*/BIT* */
 #include <ompl/base/SpaceInformation.h>
 #include <ompl/base/objectives/PathLengthOptimizationObjective.h>
 #include <ompl/base/objectives/StateCostIntegralObjective.h>
@@ -307,7 +308,6 @@ namespace ompl
                         costToGo = objective_->betterCost(
                             costToCome, objective_->motionCostHeuristic(vertex->getState(), goal->getState()));
                     }
-                    //cerr << "hello " << vertex->getId() << endl;
                     // If this can possibly improve the current solution, it is in the informed set.
                     if (objective_->isCostBetterThan(objective_->combineCosts(costToCome, costToGo), solutionCost_))
                     {
@@ -346,15 +346,7 @@ namespace ompl
                         // Sample the associated state uniformly within the informed set.
                         sampler_->sampleUniform(newSamples_.back()->getState(), solutionCost_);
                         // Count how many states we've checked.
-                        ++numSampledStates_;
-                        
-                        //costToStart_= lowerboundCostDoi(startVertices_[0u]->getState(), newSamples_.back()->getState());
-                        //costToGoal_ = lowerboundCostDoi(newSamples_.back()->getState(),goalVertices_[0u]->getState()); 
-                        
-                         
-                        //costToStart_ = pathLengthD(startVertices_[0u]->getState(), newSamples_.back()->getState());
-                        //costToGoal_  = pathLengthD(newSamples_.back()->getState(),goalVertices_[0u]->getState());//dubins
-                        
+                        ++numSampledStates_; 
                           //costToStart_ = lqEdgeCostMLQ_( startVertices_[0u]->getState(), newSamples_.back()->getState());
                           //costToGoal_ =  lqEdgeCostMLQ_(newSamples_.back()->getState(),goalVertices_[0u]->getState()) ;
                     } while (!(spaceInformation_->getStateValidityChecker()->isValid(newSamples_.back()->getState()) ) );
@@ -365,7 +357,7 @@ namespace ompl
                     newSamples_.back()->setLowerCostBoundToGoal(costToGo);
                     ++numValidSamples_;
                 } while (newSamples_.size() < numNewSamples && !terminationCondition);
-                //cerr << numNewSamples << endl;
+                
                 if (newSamples_.size() == numNewSamples)
                 {
                     // First get the number of samples inside the informed set.
@@ -373,12 +365,10 @@ namespace ompl
                     if (useKNearest_)
                     {
                         numNeighbors_ = computeNumberOfNeighbors(numSamplesInInformedSet + numNewSamples);
-                        //cerr << "neigbhors " << numSamplesInInformedSet << " " << numNeighbors_ <<endl;
                     }
                     else
                     {
                         radius_ = computeConnectionRadius(numSamplesInInformedSet + numNewSamples);
-                        //cerr << numSamplesInInformedSet + numNewSamples  << endl;
                     }
 
                     // Add all new vertices to the nearest neighbor structure.
