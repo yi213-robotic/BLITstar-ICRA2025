@@ -287,18 +287,6 @@ namespace ompl
 	    
 	        /** \brief The backwardVertexQueue queue. */
             blitstar::VertexQueue reverseVertexQueue_;
-
-            
-            // std::vector<std::pair<std::shared_ptr<blitstar::Vertex>, std::shared_ptr<blitstar::Vertex>>> FLVEdge;
-            // std::vector<std::pair<std::shared_ptr<blitstar::Vertex>, std::shared_ptr<blitstar::Vertex>>> IFLVEdge;
-            // std::vector<std::pair<std::shared_ptr<blitstar::Vertex>, std::shared_ptr<blitstar::Vertex>>> RLVEdge;
-            // std::vector<std::pair<std::shared_ptr<blitstar::Vertex>, std::shared_ptr<blitstar::Vertex>>> IRLVEdge;
-            
-            
-            // std::vector<std::pair<std::shared_ptr<blitstar::Vertex>, std::shared_ptr<blitstar::Vertex>>> FVEdge;
-            // std::vector<std::pair<std::shared_ptr<blitstar::Vertex>, std::shared_ptr<blitstar::Vertex>>> IFVEdge;
-            // std::vector<std::pair<std::shared_ptr<blitstar::Vertex>, std::shared_ptr<blitstar::Vertex>>> RVEdge;
-            // std::vector<std::pair<std::shared_ptr<blitstar::Vertex>, std::shared_ptr<blitstar::Vertex>>> IRVEdge;
             
             /** \biref the best vertex*/
             std::shared_ptr<blitstar::Vertex> BestVertex_;
