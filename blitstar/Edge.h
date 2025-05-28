@@ -32,7 +32,7 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  *********************************************************************/
 
-// Authors: Yi Wang
+// Authors: Yi Wang,Eyal Weiss, Bingxian Mu, Oren Salzman
 
 #ifndef OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_BLITSTAR_EDGE_
 #define OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_BLITSTAR_EDGE_
