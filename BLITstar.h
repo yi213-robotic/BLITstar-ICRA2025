@@ -34,8 +34,8 @@
 
 // Authors: Yi Wang, Eyal Weiss, Bingxian Mu, Oren Salzman
 
-#ifndef OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_BMITSTAR_
-#define OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_BMITSTAR_
+#ifndef OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_BLITSTAR_
+#define OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_BLITSTAR_
 
 #include <algorithm>
 #include <memory>
@@ -347,4 +347,4 @@ namespace ompl
     }  // namespace geometric
 }  // namespace ompl
 
-#endif  // OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_bmitstar
+#endif  // OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_blitstar
