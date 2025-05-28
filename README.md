@@ -5,3 +5,4 @@ We introduces Bidirectional Lazy Informed Trees (BLIT*), the first algorithm to 
 <img width="1226" alt="BLIT*" src="https://github.com/user-attachments/assets/07d3e9e8-f574-42e0-9fe2-c8c1e9254724" />
 
 🚀 **[BLIT* has been accepted to the 42th IEEE International Conference on Robotics & Automation (ICRA 2025)](https://2025.ieee-icra.org)!** We will release the C++ implementation for comparison-version after mid-June, followed by publishing the OMPL-compatible version to the official OMPL repository.
+### Dr. Eyal Weiss is a co-author in our Journal version
