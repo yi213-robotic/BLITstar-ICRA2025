@@ -1,7 +1,7 @@
 /*********************************************************************
  * Software License Agreement (BSD License)
  *
- *  Copyright (c) 2022, University of New Hampshire
+ *  Copyright (c) 2025, University of New Hampshire
  *  All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without
@@ -99,4 +99,4 @@ namespace ompl
 
 }  // namespace ompl
 
-#endif  //  OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_bmitstar_EDGE_
+#endif  //  OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_blitstar_EDGE_
