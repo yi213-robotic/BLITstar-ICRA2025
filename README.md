@@ -6,3 +6,13 @@ We introduces Bidirectional Lazy Informed Trees (BLIT*), the first algorithm to 
 
 🚀 **[BLIT* has been accepted to the 42th IEEE International Conference on Robotics & Automation (ICRA 2025)](https://2025.ieee-icra.org)!** We will release the C++ implementation for comparison-version after mid-June, followed by publishing the OMPL-compatible version to the official OMPL repository.
 ### [Dr. Eyal Weiss](https://sites.google.com/view/eyal-weiss) is a co-author in our Journal version
+
+### This tutorial explains how to add the BLIT* planner to OMPL by creating the appropriate directory and copying the source code from this GitHub repository.
+
+If you're already familiar with OMPL, follow these steps:
+
+cd /path/to/ompl/src/ompl/geometric/planners/
+mkdir lazyinformedtrees
+cd lazyinformedtrees
+git clone this repo
+
