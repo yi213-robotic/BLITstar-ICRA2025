@@ -11,8 +11,11 @@ We introduces Bidirectional Lazy Informed Trees (BLIT*), the first algorithm to 
 
 If you're already familiar with OMPL, follow these steps:
 
-cd /path/to/ompl/src/ompl/geometric/planners/
-mkdir lazyinformedtrees
-cd lazyinformedtrees
-git clone this repo
+   (1) cd /path/to/ompl/src/ompl/geometric/planners/
+
+   (2) mkdir lazyinformedtrees
+
+   (3) cd lazyinformedtrees
+
+   (4) git clone this repos
 
