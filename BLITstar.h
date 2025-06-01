@@ -73,7 +73,7 @@ namespace ompl
 
             /** \brief Additional setup that can only be done once a problem definition is set. */
             void setup() override;
-
+            void runTime();  
             /** \brief Checks whether the planner is successfully setup. */
             ompl::base::PlannerStatus::StatusType ensureSetup();
 
@@ -288,7 +288,9 @@ namespace ompl
             
             /** \biref the best vertex*/
             std::shared_ptr<blitstar::Vertex> BestVertex_;
-            
+
+            std::shared_ptr<ompl::geometric::PathGeometric> path_;
+
             /** \biref the middler vertex*/
             blitstar::MiddleVertex MMvertex_;  
             /** \brief Lexicographically compares the keys of two vertices. */
