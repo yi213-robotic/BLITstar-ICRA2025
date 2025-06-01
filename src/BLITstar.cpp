@@ -1019,6 +1019,7 @@ namespace ompl
                            if(MMvertex_.second)
                            {  MMvertex_.second->resetMeet(); }
                            vertex->setMeet();
+		           runTime();
                            MMvertex_ = make_pair(C_curr=meetCost,vertex);
                            updateCostToGo(vertex, costToCome, costToGo,costFromOriginal,true); 
         }
