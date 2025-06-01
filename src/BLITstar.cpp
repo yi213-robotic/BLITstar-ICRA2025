@@ -806,16 +806,17 @@ namespace ompl
                     lhs.first.cbegin(), lhs.first.cend(), rhs.first.cbegin(), rhs.first.cend(),
                     [this](const auto &a, const auto &b) { return objective_->isCostBetterThan(a, b); });
         }
-        
-        void BLITstar::showingRunningtime() 
+        void BLITstar::runTime()
         {
             endT = chrono::high_resolution_clock::now();
-            double time_taken = chrono::duration_cast<chrono::nanoseconds>(endT - startT).count();
+            time_taken = chrono::duration_cast<chrono::nanoseconds>(endT - startT).count();
             time_taken *= 1e-9;
+        }
+
+        void BLITstar::showingRunningtime() 
+        {
             cerr  << fixed << time_taken << setprecision(9) << endl;
             cout  << fixed << time_taken << setprecision(9) << endl;
-            //cerr << " sec" << endl;
-             //<< "Time taken by BiIT* is : "
         }
         
         void BLITstar::printForwardStatement(std::shared_ptr<blitstar::Vertex> &vertex)
