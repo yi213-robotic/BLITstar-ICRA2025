@@ -305,7 +305,7 @@ namespace ompl
             std::size_t numSparseCollisionChecksCurrentLevel_{0u};
             std::size_t forwardSearchVersion_{0u};
             std::size_t reverseSearchVersion_{0u};
-            
+            double time_taken{0u};
             /** \brief The number of samples per batch. */
             std::size_t batchSize_{300u};
             /** \brief The option that specifies whether to track approximate solutions. */
