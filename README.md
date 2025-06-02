@@ -23,4 +23,18 @@ If you're already familiar with OMPL, follow these steps:
 
    (4) git clone this repos
 
+When testing 10D linearized quadrotor, you need :
+
+(1) For computing edge cost:
+
+        double arrTime_ = estimatedTimeMGLQ(vertex->getState(),neighbor->getState());
+        
+        auto edgeCost = lqEdgeCostMGLQ(vertex->getState(),neighbor->getState(), arrTime_);
+
+(2) In isValidAtResolution() for checking validity: 
+         
+         double t = (static_cast<double>(mid) / static_cast<double>(segmentCount))*arriveTime_;
+         
+         interpolateMGLQ(t, arriveTime_, parent->getState(), child->getState(), detectionState_, false);  
+
 ### Please feel free to reach out if you have any questions!
