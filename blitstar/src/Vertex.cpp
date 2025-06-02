@@ -197,7 +197,17 @@ std::size_t generateId()
             ompl::base::Cost Vertex::getEdgeCostFromReverseParent() const
             {
                 return edgeCostFromBackwardParent_;
-            }            
+            }
+
+            ompl::base::Cost Vertex::getDummyEdgeCostFromForwardParent() const
+            {
+                return edgeCostFromDummyForwardParent_;
+            }
+            
+            ompl::base::Cost Vertex::getDummyEdgeCostFromReverseParent() const
+            {
+                return edgeCostFromDummyBackwardParent_;
+            } 
   
             bool Vertex::hasForwardParent() const
             {
@@ -394,7 +404,7 @@ std::size_t generateId()
             void Vertex::setForwardValidParent(const std::shared_ptr<Vertex> &vertex, const ompl::base::Cost &edgeCost)
             {
                 // Remember the edge cost.
-                edgeCostFromForwardParent_ = edgeCost;
+                edgeCostFromDummyForwardParent_ = edgeCost;
                 // Remember the corresponding parent.
                 forwardEdgeParent_ = std::weak_ptr<Vertex>(vertex); 
             }
@@ -402,7 +412,7 @@ std::size_t generateId()
             void Vertex::setReverseValidParent(const std::shared_ptr<Vertex> &vertex, const ompl::base::Cost &edgeCost)
             {
                 // Remember the edge cost.
-                edgeCostFromBackwardParent_ = edgeCost;
+                edgeCostFromDummyBackwardParent_ = edgeCost;
                 // Remember the corresponding parent.
                 reverseEdgeParent_ = std::weak_ptr<Vertex>(vertex);    
             }   
