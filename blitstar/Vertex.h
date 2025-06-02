@@ -286,7 +286,9 @@ namespace ompl
 
                 /** \brief The edge cost from the parent. */
                 ompl::base::Cost edgeCostFromForwardParent_{0u};
+                ompl::base::Cost edgeCostFromDummyForwardParent_{0u};
                 ompl::base::Cost edgeCostFromBackwardParent_{0u};
+                ompl::base::Cost edgeCostFromDummyBackwardParent_{0u};
                 /** \brief The reverse cost to come. */
 
                 /** \brief The cost to come from the goal when this vertex was expanded. */
