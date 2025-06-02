@@ -999,18 +999,20 @@ namespace ompl
             if(iSolution_ && vertex->hasReverseEdgeParent())
             {
                   auto reverseParent = vertex->getReverseEdgeParent();
-                  auto edgeCost = vertex->getEdgeCostFromReverseParent();//objective_->motionCostHeuristic(reverseParent->getState(), vertex->getState())
+                  auto edgeCost = vertex->getDummyEdgeCostFromReverseParent();//objective_->motionCostHeuristic(reverseParent->getState(), vertex->getState())
                   auto currentValue = objective_->combineCosts(vertex->getCostToComeFromStart(),edgeCost);
                   auto hValue = reverseParent->getLowerCostBoundToGoal();
-                  if(vertex->getId() != reverseParent->getForwardParent()->getId() && objective_->isCostBetterThan(currentValue,reverseParent->getCostToComeFromStart()))
+                  if(objective_->isCostBetterThan(currentValue,reverseParent->getCostToComeFromStart()))
                   {
                          reverseParent->setCostToComeFromStart(currentValue);  
                          auto arriveTime_ = vertex->getReverseEdgeTime();
-                         reverseParent->setForwardVertexParent(vertex,reverseParent->getEdgeCostFromForwardParent(),arriveTime_);
+                         reverseParent->setForwardVertexParent(vertex,edgeCost,arriveTime_);
+                         vertex->resetReverseEdgeParent();
                          vertex->addToForwardChildren(reverseParent);
+                         updateForwardCost(reverseParent, reverseParent->getCostToComeFromStart(), hValue);
+                         insertOrUpdateInForwardVertexQueue(reverseParent,reverseParent->getCostToComeFromStart(),hValue,vertex->meetVertex()); 
                   }
-                  updateForwardCost(reverseParent, reverseParent->getCostToComeFromStart(), hValue);
-                  insertOrUpdateInForwardVertexQueue(reverseParent,reverseParent->getCostToComeFromStart(),hValue,vertex->meetVertex()); 
+
             }
         } 
         
