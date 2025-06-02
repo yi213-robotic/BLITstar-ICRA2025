@@ -23,7 +23,7 @@ If you're already familiar with OMPL, follow these steps:
 
    (4) git clone this repos
 
-When testing 10D linearized quadrotor, you need :
+### When testing 10D linearized quadrotor, you need :
 
 (1) For computing edge cost:
 
