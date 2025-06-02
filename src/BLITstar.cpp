@@ -1276,18 +1276,20 @@ namespace ompl
             if(iSolution_ && vertex->hasForwardEdgeParent())
             {
                   auto forwardParent = vertex->getForwardEdgeParent();
-                  auto edgeCost = vertex->getEdgeCostFromForwardParent(); //auto edgeCost = objective_->motionCostHeuristic(forwardParent->getState(), vertex->getState());
+                  auto edgeCost = vertex->getDummyEdgeCostFromForwardParent(); //auto edgeCost = objective_->motionCostHeuristic(forwardParent->getState(), vertex->getState());
                   auto currentValue = objective_->combineCosts(vertex->getCostToComeFromGoal(),edgeCost);
                   auto hValue = forwardParent->getLowerCostBoundToStart();
-                  if(vertex->getId() != forwardParent->getReverseParent()->getId() && objective_->isCostBetterThan(currentValue,forwardParent->getCostToComeFromGoal()))
+                  if(objective_->isCostBetterThan(currentValue,forwardParent->getCostToComeFromGoal()))
                   {
                          forwardParent->setCostToComeFromGoal(currentValue); 
                          double arriveTime_ = vertex->getForwardEdgeTime(); 
-                         forwardParent->setReverseVertexParent(vertex,forwardParent->getEdgeCostFromReverseParent(),arriveTime_);
+                         vertex->resetForwardEdgeParent();
+                         forwardParent->setReverseVertexParent(vertex,edgeCost,arriveTime_);
                          vertex->addToReverseChildren(forwardParent);
+                         updateReverseCost(forwardParent,forwardParent->getCostToComeFromGoal(),hValue);                  
+                         insertOrUpdateInReverseVertexQueue(forwardParent,forwardParent->getCostToComeFromGoal(),hValue,vertex->meetVertex()); 
                   }
-                  updateReverseCost(forwardParent,forwardParent->getCostToComeFromGoal(),hValue);
-                  insertOrUpdateInReverseVertexQueue(forwardParent,forwardParent->getCostToComeFromGoal(),hValue,vertex->meetVertex()); 
+
             }
         }
         
