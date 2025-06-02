@@ -93,6 +93,8 @@ namespace ompl
                 /** \brief Returns the edge cost from the forward parent. */
                 ompl::base::Cost getEdgeCostFromForwardParent() const;
                 ompl::base::Cost getEdgeCostFromReverseParent() const;
+                ompl::base::Cost getDummyEdgeCostFromForwardParent() const;  
+                ompl::base::Cost getDummyEdgeCostFromReverseParent() const; 
                 /** \brief Returns whether this vertex has a parent in the forward search. */
                 bool hasForwardEdgeParent() const;
                 /** \brief Sets the parent vertex (in the forward-search tree). */
