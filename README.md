@@ -23,3 +23,4 @@ If you're already familiar with OMPL, follow these steps:
 
    (4) git clone this repos
 
+### Please feel free to reach out if you have any questions!
