@@ -33,7 +33,7 @@
  *********************************************************************/
 
 // Authors: Yi Wang,Eyal Weiss, Bingxian Mu, Oren Salzman
-/*We adapt from AIT*/BIT* */
+/*We adapt from AIT BIT */
 #include <ompl/base/SpaceInformation.h>
 #include <ompl/base/objectives/PathLengthOptimizationObjective.h>
 #include <ompl/base/objectives/StateCostIntegralObjective.h>
