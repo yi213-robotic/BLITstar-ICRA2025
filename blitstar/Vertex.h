@@ -33,7 +33,7 @@
  *********************************************************************/
 
 // Authors: Yi Wang, Eyal Weiss, Bingxian Mu, Oren Salzman
-
+/** Adapted from AIT*/
 #ifndef OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_BLITSTAR_VERTEX_
 #define OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_BLITSTAR_VERTEX_
 
