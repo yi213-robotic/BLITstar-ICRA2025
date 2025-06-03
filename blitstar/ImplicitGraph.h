@@ -33,7 +33,7 @@
  *********************************************************************/
 
 // Authors: Yi Wang,Eyal Weiss, Bingxian Mu, Oren Salzman
-
+// Partially adapted from AIT* with improvements.
 #ifndef OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_BLITSTAR_IMPLICITGRAPH_
 #define OMPL_GEOMETRIC_PLANNERS_INFORMEDTREES_BLITSTAR_IMPLICITGRAPH_
 
