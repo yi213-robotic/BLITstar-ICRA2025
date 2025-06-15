@@ -68,7 +68,7 @@ namespace ompl
             /** \brief Constructs a BLIT*. */
             explicit BLITstar(const ompl::base::SpaceInformationPtr &spaceInformation);
 
-            /** \brief Destructs a BIT*. */
+            /** \brief Destructs a BLIT*. */
             ~BLITstar();
 
             /** \brief Additional setup that can only be done once a problem definition is set. */
