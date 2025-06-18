@@ -23,6 +23,8 @@ If you're already familiar with OMPL, follow these steps:
 
    (4) git clone this repos
 
+### Notably, in contrast to a geometric system, the path cost of a kinodynamic system denotes the cumulative effort or control input required to satisfy dynamical constraints, rather than just the path length.
+
 ### When testing the 10D linearized quadrotor, you will need :
 
 (1) For computing edge cost:
