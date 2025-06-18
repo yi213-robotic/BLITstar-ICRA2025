@@ -4,7 +4,7 @@ We introduces Bidirectional Lazy Informed Trees (BLIT*), the first algorithm to 
 
 <img width="1226" alt="BLIT*" src="https://github.com/user-attachments/assets/07d3e9e8-f574-42e0-9fe2-c8c1e9254724" />
 
-🚀 **[BLIT* has been accepted to the 42th IEEE International Conference on Robotics & Automation (ICRA 2025)](https://2025.ieee-icra.org)!** 
+:rocket:**[BLIT* has been accepted to the 42th IEEE International Conference on Robotics & Automation (ICRA 2025)](https://2025.ieee-icra.org)!** 
 
 In this repository, we have released C++ implementation for the comparison-version.
 
