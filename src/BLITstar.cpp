@@ -1541,7 +1541,7 @@ namespace ompl
                 // Only do the detection if we haven't tested this state on a previous level.
                 if (currentCheck > performedChecks)
                 {
-                    /** double t = (static_cast<double>(mid) / static_cast<double>(segmentCount))*arriveTime_; for a kinodynamic system */			  
+                    /** double t = (static_cast<double>(mid) / static_cast<double>(segmentCount))*arriveTime_; time-variant for a kinodynamic system */			  
                     space_->interpolate(parent->getState(), child->getState(),static_cast<double>(mid) / static_cast<double>(segmentCount), detectionState_);
                     if (!spaceInformation_->isValid(detectionState_))
                     {
