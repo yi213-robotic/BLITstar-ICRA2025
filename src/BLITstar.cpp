@@ -1548,6 +1548,8 @@ namespace ompl
                         // Blacklist the edge.
                         parent->blacklistAsChild(child);
                         child->blacklistAsChild(parent);
+
+			// record the maximum sparse collision detection resultion if a new level is reached    
                         if(!sparseCheck && currentCheck > numSparseCollisionChecksCurrentLevel_)
                         {
                             numSparseCollisionChecksCurrentLevel_ = currentCheck+1u;
