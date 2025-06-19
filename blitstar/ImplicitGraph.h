@@ -79,10 +79,10 @@ namespace ompl
                 /** \brief Get the reqire factor of the RGG. */
                 double getRewireFactor() const;
 
-                /** \brief Set the maximum number of goals AIT* will sample from sampleable goal regions. */
+                /** \brief Set the maximum number of goals BLIT* will sample from sampleable goal regions. */
                 void setMaxNumberOfGoals(unsigned int maxNumberOfGoals);
 
-                /** \brief Get the maximum number of goals AIT* will sample from sampleable goal regions. */
+                /** \brief Get the maximum number of goals BLIT* will sample from sampleable goal regions. */
                 unsigned int getMaxNumberOfGoals() const;
 
                 /** \brief Whether to use a k-nearest connection model. If false, it uses an r-disc model. */
@@ -194,7 +194,7 @@ namespace ompl
                 /** \brief The vertex to the goal. */
                 std::shared_ptr<Vertex> bestApproximateGoal_;
 
-                /** \brief Whether to use a k-nearest RGG. If false, AIT* uses an r-disc RGG. */
+                /** \brief Whether to use a k-nearest RGG. If false, BLIT* uses an r-disc RGG. */
                 bool useKNearest_{false};
 
                 /** \brief The maximum number of goals BIT* will sample. */
