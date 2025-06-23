@@ -44,7 +44,6 @@
 #include "ompl/base/Planner.h"
 #include <unsupported/Eigen/Polynomials>
 #include "ompl/geometric/PathGeometric.h"
-#include "ompl/geometric/planners/lazyinformedtrees/blitstar/Edge.h"
 #include "ompl/geometric/planners/lazyinformedtrees/blitstar/ImplicitGraph.h"
 #include "ompl/geometric/planners/lazyinformedtrees/blitstar/Vertex.h"
 #include "ompl/geometric/planners/lazyinformedtrees/blitstar/Queuetypes.h"
