@@ -1175,6 +1175,12 @@ namespace ompl
                     
                     auto edgeCost = objective_->motionCostHeuristic(neighbor->getState(), vertex->getState());
                     double arrTime_ = 0;
+                    
+                    /**
+                      //double arrTime_ = estimatedTimeMGLQ(neighbor->getState(),vertex->getState());
+                      //auto edgeCost = lqEdgeCostMGLQ(neighbor->getState(),vertex->getState(),arrTime_);
+                    */
+                    
                     auto est_gValue = objective_->combineCosts(vertex->getCostToComeFromGoal(), edgeCost);  
 
                     if (objective_->isCostBetterThan(est_gValue, gValue) && neighbor->getId() != 1)
