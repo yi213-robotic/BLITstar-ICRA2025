@@ -895,6 +895,13 @@ namespace ompl
                     
                     // g_hat(x_u) + c_hat(x_u,x_v)
                     auto est_gValue = objective_->combineCosts(vertex->getCostToComeFromStart(), edgeCost);
+                    
+                    /** Adding the kninodynamic system
+                    
+                    double arrTime_ = estimatedTimeMGLQ(vertex->getState(),neighbor->getState());
+                    auto edgeCost = lqEdgeCostMGLQ(vertex->getState(),neighbor->getState(), arrTime_);
+                    
+                    */
                   
                     // If g_F(x_v) > g_F(x_u) + c_hat(x_u,x_v) 
                     if (objective_->isCostBetterThan(est_gValue, gValue)&& neighbor->getId() != 0)
