@@ -839,8 +839,6 @@ namespace ompl
             // Insert current children into forward queue  
             for (const auto &child : vertex->getForwardChildren())
             {      
-                    if(iSolution_ && vertex->hasReverseEdgeParent() && vertex->getReverseEdgeParent()->getId() == child->getId())
-                    {     continue;    }
                     if((!iSolution_ || vertex->nearObstacle() || child->nearObstacle()) && !couldBeValid(make_pair(vertex,child),child->getForwardEdgeTime()))
                     {
                             resetForwardParentAndRemeberTheVertex(child,vertex);
@@ -853,14 +851,11 @@ namespace ompl
                     if(iSolution_ && !child->hasReverseParent() && objective_->isCostLargerThan(objective_->combineCosts(gValue,gValue),solutionCost_))
                     {      continue;   }
                     // h_bar(x_v): lower cost bound to go such as Eculidean distance
-                    auto hValue = child->getLowerCostBoundToGoal();     
-                    if(child->getForwardVersion() != forwardSearchVersion_ || (child->hasForwardParent() && child->getForwardParent()->getId() == vertex->getId())) 
-                    {    
+                    auto hValue = child->getLowerCostBoundToGoal();        
                          child->setCostToComeFromStart(gValue); 
                          gValue = child->getCostToComeFromStart();
                          updateForwardCost(child, gValue, hValue);
-                         insertOrUpdateInForwardVertexQueue(child,gValue,hValue,vertex->meetVertex());            
-                    }
+                         insertOrUpdateInForwardVertexQueue(child,gValue,hValue,vertex->meetVertex()); 
             }
             
             // Insert new neighbors in to forward queue
@@ -1115,8 +1110,6 @@ namespace ompl
             // Expanding in reverse tree is analogous as forward tree
             for (const auto &child : vertex->getReverseChildren())
             {      
-                    if(iSolution_ && vertex->hasForwardEdgeParent() && child->getId() == vertex->getForwardEdgeParent()->getId())
-                       continue;
                     if((!iSolution_ || vertex->nearObstacle()  || child->nearObstacle()) && !couldBeValid(make_pair(child,vertex),child->getReverseEdgeTime()))
                     {
                             resetReverseParentAndRemeberTheVertex(child,vertex);
@@ -1127,13 +1120,10 @@ namespace ompl
                     if(iSolution_ && !child->hasForwardParent() && objective_->isCostLargerThan(objective_->combineCosts(gValue,gValue),solutionCost_))
                     {      continue;   }
                     auto hValue = child->getLowerCostBoundToStart();                   
-                    if(child->getReverseVersion() != reverseSearchVersion_ || (child->hasReverseParent() && ( child->getReverseParent()->getId() == vertex->getId())))
-                    {
                          child->setCostToComeFromGoal(gValue);                                              
                          gValue = child->getCostToComeFromGoal();
                          updateReverseCost(child,gValue,hValue);
                          insertOrUpdateInReverseVertexQueue(child,gValue,hValue,vertex->meetVertex());  
-                    }
             }
             bool Potential_collide_ = false;
             for (const auto &neighbor : graph_.getNeighbors(vertex))
